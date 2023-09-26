@@ -1,0 +1,275 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins",sans-serif;
+}
+
+body{
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button{
+  cursor: pointer;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 60%;
+  max-width: 100%;
+  padding-right: 5px;
+}
+
+aside{
+  width: 40%;
+  border-top-right-radius: 30px;
+}
+aside .top{
+  height: 7rem;
+  background-image: url(./asset/375173449_3450568971921480_4013013659369728801_n\ \(2\).jpg);
+  background-size: cover;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 5px;
+}
+aside .top .user-detail{
+  background: #0001113f;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 10px;
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+}
+aside .date{
+  padding: 10px 10px 50px 10px;
+  border-right: 1px solid #b4b4b4;
+  height: 80%;
+}
+aside .date p{
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+/* dates */
+aside .date li{
+  list-style-type: none;
+  border-left: 5px solid;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+aside .date li:nth-child(2){
+  border-left-color: blue;
+  background-color: rgba(0, 0, 255, 0.342);
+}
+aside .date li:nth-child(3){
+  background-color: rgba(109, 52, 161, 0.342);
+  border-left-color: rgb(109, 52, 161);
+}
+aside .date li:nth-child(4){
+  border-left-color: rgb(13, 165, 46);
+  background-color: rgba(13, 165, 46, 0.342);
+}
+aside .date li:nth-child(5){
+  background-color: rgba(172, 72, 197, 0.342);
+  border-left-color: rgb(172, 72, 197);
+}
+aside .date li:nth-child(6){
+  background-color: rgba(172, 26, 57, 0.342);
+  border-left-color: rgb(172, 26, 57);
+}
+aside .date li:nth-child(7){
+  background-color: rgba(4, 136, 189, 0.342);
+  border-left-color: rgb(4, 136, 189);
+}
+aside .date li:nth-child(8){
+  background-color: rgba(163, 199, 2, 0.342);
+  border-left-color: rgb(163, 199, 2);
+}
+aside .date li a{
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
+section{
+  width: 60%;
+}
+section header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  height: 19.5%;
+}
+section header i{
+  display: none !important;
+  font-size: 30px;
+  background-color: blueviolet;
+  padding: 3px;
+  border-radius: 5px;
+  color: white;
+}
+
+/* notes */
+section .note-wrap{
+  display: grid;
+  grid-template-columns: repeat(7, 100%);
+  gap: 30px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  height: 80%;
+}
+section .note-wrap .note{
+  scroll-snap-align: center;
+  height: 90%;
+  padding: 0 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+section .note-wrap .note::-webkit-scrollbar{
+  width: 10px;
+}
+section .note-wrap .note::-webkit-scrollbar-thumb{
+  background-color: #8a2be2;
+  border-radius: 20px;
+}
+section .note-wrap .note::-webkit-scrollbar-button{
+  background-color: #8a2be2;
+  border-radius: 10px;
+}
+section .note-wrap .note::-webkit-scrollbar-track-piece{
+  background-color: #892be257;
+  border-radius: 10px;
+}
+section .note-wrap .note h2{
+  border-left: 5px solid #8a2be2;
+  padding-left: 15px;
+  border-radius: 5px;
+  background-color: #892be242;
+  font-size: 20px;
+  font-weight: 400;
+}
+section .note-wrap .note .intro-text{
+  position: relative;
+  margin-top: 5px;
+}
+section .note-wrap .note .intro-text::before{
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  animation: animate 6s steps(12) infinite;
+}
+@keyframes animate {
+  40%, 60% {
+    left: calc(100%);
+  }
+  10%{
+    left: 0%;
+  }
+}
+
+section form{
+  margin-top: 15px;
+}
+section form label{
+  color: rgb(110, 110, 110);
+}
+section form input{
+  width: 100%;
+  padding: 5px 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  outline: none;
+}
+section form button{
+  padding: 8px 15px;
+  background: #2560df;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+}
+section form .clear{
+  background-color: rgb(182, 6, 6);
+}
+section .list-items h3{
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+section .list-items{
+  padding-left: 10px;
+}
+section .list-items ol li{
+  border-left: 5px solid blueviolet;
+  padding: 10px;
+  border-radius: 5px;
+  border-top: 1px solid #b4b4b4;
+  border-bottom: 1px solid #b4b4b4;
+  border-right: 1px solid #b4b4b4;
+  margin: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .container form input{
+  width: 100%;
+  outline: none;
+  padding: 5px 10px;
+  font-size: 18px;
+}
+.container form button{
+  padding: 5px 15px;
+  margin-top: 10px;
+  border: none;
+  background-color: blueviolet;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+.container .items{
+  margin-top: 10px;
+}
+.container .items li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  border-left: 5px solid rgb(0, 133, 185);
+  padding: 10px 15px;
+  border-radius: 5px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  border-right: 1px solid grey;
+  margin: 5px;
+  word-break: break-all;
+} */
